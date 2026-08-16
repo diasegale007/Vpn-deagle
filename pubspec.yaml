@@ -1,0 +1,23 @@
+name: vpn_app
+description: VPN клиент на WireGuard со списком серверов
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  wireguard_flutter: ^0.2.6      # обёртка над WireGuard для Android/iOS
+  http: ^1.2.0                   # запросы к бэкенду за списком серверов
+  shared_preferences: ^2.2.2     # сохранение последнего выбранного сервера
+  provider: ^6.1.1               # управление состоянием подключения
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
